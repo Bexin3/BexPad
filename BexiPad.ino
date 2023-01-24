@@ -99,7 +99,7 @@ void keyrt0() {
       RTL0 = Analog0;
     };
   } else {
-    if (RTL0 - Analog0 > RTR0) {
+    if (RTL0 - Analog0 > RTR0 || Analog0 < act0) {
       Keyboard.release(key0);
       key0on = false;
     };
@@ -119,7 +119,7 @@ void keyrt1() {
       RTL1 = Analog1;
     };
   } else {
-    if (RTL1 - Analog1 > RTR1) {
+    if (RTL1 - Analog1 > RTR1 || Analog1 < act1) {
       Keyboard.release(key1);
       key1on = false;
     };
